@@ -1,0 +1,55 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <f:asset.css identifier="timeline" href="EXT:{{EXTENSION_KEY}}/Resources/Public/Css/components-custom/timeline.bundle.css" />
+
+    <f:if condition="{data.bodytext}">
+        <div class="ce-bodytext">
+            <f:format.html>{data.bodytext}</f:format.html>
+        </div>
+    </f:if>
+
+    <f:if condition="{content}">
+        <section class="timeline">
+            <div class="container">
+                <f:for each="{content}" as="item" iteration="i">
+                    <article id="timeline-item-{item.data.uid}" class="timeline-item">
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content {f:if(condition: '{item.data.image}', then: 'with-image')}">
+                            <f:if condition="{item.data.image}">
+                                <div class="timeline-img">
+                                    <f:image src="{item.data.image}" treatIdAsReference="1" />
+                                </div>
+                            </f:if>
+
+                            <f:if condition="{item.data.header}">
+                                <f:then>
+                                    <header>
+                                        <f:if condition="{item.data.date}">
+                                            <f:format.date format="Y">{item.data.date}</f:format.date>
+                                        </f:if>
+                                        {item.data.header}
+                                    </header>
+                                </f:then>
+                                <f:else>
+                                    <f:if condition="{item.data.date}">
+                                        <header><f:format.date format="Y">{item.data.date}</f:format.date></header>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                            <div class="ce-bodytext">
+                                <f:format.html>{item.data.description}</f:format.html>
+                            </div>
+                        </div>
+                    </article>
+                </f:for>
+            </div>
+        </section>
+    </f:if>
+</f:section>
+
+</html>

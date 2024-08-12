@@ -1,0 +1,16 @@
+mod.wizards.newContentElement.wizardItems {
+    // add the content element to the tab "common"
+    common {
+        elements {
+            {{EXTENSION_NAME}}_timeline {
+                iconIdentifier = content-text
+                title = LLL:EXT:{{EXTENSION_KEY}}/Resources/Private/Language/locallang_timeline.xlf:{{EXTENSION_NAME}}_timeline.title
+                description = LLL:EXT:{{EXTENSION_KEY}}/Resources/Private/Language/locallang_timeline.xlf:{{EXTENSION_NAME}}_timeline.description
+                tt_content_defValues {
+                    CType = {{EXTENSION_NAME}}_timeline
+                }
+            }
+        }
+        show := addToList({{EXTENSION_NAME}}_timeline)
+    }
+}

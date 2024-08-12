@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2024-02-08T00:01:00Z" product-name="{{EXTENSION_KEY}}">
+        <header/>
+        <body>
+
+            <trans-unit id="{{EXTENSION_NAME}}_timeline.title" xml:space="preserve">
+                <source>Timeline</source>
+            </trans-unit>
+
+            <trans-unit id="{{EXTENSION_NAME}}_timeline.description" xml:space="preserve">
+                <source></source>
+            </trans-unit>
+
+            <trans-unit id="{{EXTENSION_NAME}}_timeline.tabs.content" xml:space="preserve">
+                <source>Content</source>
+            </trans-unit>
+
+            <trans-unit id="{{EXTENSION_NAME}}_timeline_content.label" xml:space="preserve">
+                <source>Timeline content</source>
+            </trans-unit>
+            <trans-unit id="{{EXTENSION_NAME}}_timeline_content.description" xml:space="preserve">
+                <source></source>
+            </trans-unit>
+
+            <trans-unit id="tx_{{EXTENSION_NAME}}_timeline_content.label" xml:space="preserve">
+                <source>Timeline content</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>
