@@ -3,7 +3,7 @@ This is a extension for the [EXT:hh_theme_default](https://github.com/Hauer-Hein
 It adds a custom content element "Timeline".
 
 ### Setup
-1. Simply copy & paste code in your theme (hh_theme_default).
+1. Simply copy & paste code in your theme (hh_theme_default) - download from here: [Tags](https://github.com/Hauer-Heinrich/hh_theme_default_timeline/tags).
 2. IMPORTANT copy the content of 'ext_tables.addon.sql' into your 'ext_tables.sql'!
 3. Replace following strings or use the script shipped with the EXT:hh_theme_default:
 - {{EXTENSION_KEY}} e. g. hh_ext_timeline
