@@ -8,6 +8,9 @@ It adds a custom content element "Timeline".
 3. Replace following strings or use the script shipped with the EXT:hh_theme_default:
 - {{EXTENSION_KEY}} e. g. hh_ext_timeline
 - {{EXTENSION_NAME}} e. g. hhexttimeline
+4. Rename the TCA file 'tx_hhthemedefault_timeline_content.php' to 'tx_{{EXTENSION_NAME}}_timeline_content.php'
+5. Include 'hhthemedefault_timeline.typoscript' to your theme (not needed if your theme is based on hh_theme_default)
+6. (optional) Rename the TypoScript file 'hhthemedefault_timeline.typoscript' to '{{EXTENSION_NAME}}_timeline.typoscript'
 
 #### Example
 ![example picture from backend](.github/images/preview-1.jpg?raw=true "Main")

@@ -1,0 +1,24 @@
+tt_content.{{EXTENSION_NAME}}_timeline =< lib.contentElement
+tt_content.{{EXTENSION_NAME}}_timeline {
+    templateName.stdWrap.cObject = CASE
+    templateName.stdWrap.cObject {
+        key.data = field:layout
+
+        default = TEXT
+        default.value = Timeline
+    }
+
+    dataProcessing {
+        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        20 {
+            if.isTrue.field = {{EXTENSION_NAME}}_timeline_content
+            table = tx_{{EXTENSION_NAME}}_timeline_content
+            pidInList.field = pid
+            where = parentid=###uid### AND deleted=0 AND hidden=0
+            orderBy = sorting
+            markers.uid.field = uid
+
+            as = content
+        }
+    }
+}
